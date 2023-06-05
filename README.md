@@ -1,0 +1,1 @@
+This repository contains my .NET version of [LearnOpenGL](https://learnopengl.com) using Silk.NET.
