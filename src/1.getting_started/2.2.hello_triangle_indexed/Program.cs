@@ -89,19 +89,32 @@ unsafe void OnLoad()
 
     float[] vertices = new[]
     {
-        -0.5f, -0.5f, 0.0f,
+         0.5f,  0.5f, 0.0f,
          0.5f, -0.5f, 0.0f,
-         0.0f,  0.5f, 0.0f,
+        -0.5f, -0.5f, 0.0f,
+        -0.5f,  0.5f, 0.0f,
+    };
+
+    uint[] indices = new uint[]
+    {
+        0, 1, 3,
+        1, 2, 3,
     };
 
     vao = gl.GenVertexArrays(1);
     uint vbo = gl.GenBuffers(1);
+    uint ebo = gl.GenBuffers(1);
 
     gl.BindVertexArray(vao.Value);
     gl.BindBuffer(BufferTargetARB.ArrayBuffer, vbo);
     fixed (float* buf = vertices)
     {
         gl.BufferData(BufferTargetARB.ArrayBuffer, (nuint)(vertices.Length * sizeof(float)), buf, BufferUsageARB.StaticDraw);
+    }
+    gl.BindBuffer(BufferTargetARB.ElementArrayBuffer, ebo);
+    fixed (uint* buf = indices)
+    {
+        gl.BufferData(BufferTargetARB.ElementArrayBuffer, (nuint)(indices.Length * sizeof(uint)), buf, BufferUsageARB.StaticDraw);
     }
     
     gl.VertexAttribPointer(0, 3, GLEnum.Float, false, 3 * sizeof(float), (void*)0);
@@ -126,7 +139,7 @@ void OnUpdate(double dt)
 {
 }
 
-void OnRender(double dt)
+unsafe void OnRender(double dt)
 {
     if (gl is null || shaderProgram is null || vao is null) return;
 
@@ -135,5 +148,6 @@ void OnRender(double dt)
     
     gl.UseProgram(shaderProgram.Value);
     gl.BindVertexArray(vao.Value);
-    gl.DrawArrays(GLEnum.Triangles, 0, 3);
+    // gl.DrawArrays(GLEnum.Triangles, 0, 3);
+    gl.DrawElements(GLEnum.Triangles, 6, DrawElementsType.UnsignedInt, null);
 }
