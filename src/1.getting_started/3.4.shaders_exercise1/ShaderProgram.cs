@@ -1,7 +1,6 @@
-﻿using System.Diagnostics;
-using Silk.NET.OpenGL;
+﻿using Silk.NET.OpenGL;
 
-namespace shaders_shaderclass;
+namespace LearnOpenGL;
 
 public class ShaderProgram
 {

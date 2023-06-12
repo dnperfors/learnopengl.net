@@ -1,4 +1,4 @@
-﻿using shaders_shaderclass;
+﻿using LearnOpenGL;
 using Silk.NET.Input;
 using Silk.NET.Maths;
 using Silk.NET.OpenGL;
