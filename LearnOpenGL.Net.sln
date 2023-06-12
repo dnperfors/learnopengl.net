@@ -26,6 +26,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.1.shaders_uniform", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.2.shaders_interpolation", "src\1.getting_started\3.2.shaders_interpolation\3.2.shaders_interpolation.csproj", "{7A213581-5573-4179-A4AD-1DF7FA0D5771}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.3.shaders_shaderclass", "src\1.getting_started\3.3.shaders_shaderclass\3.3.shaders_shaderclass.csproj", "{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.4.shaders_exercise1", "src\1.getting_started\3.4.shaders_exercise1\3.4.shaders_exercise1.csproj", "{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.6.shaders_exercise3", "src\1.getting_started\3.6.shaders_exercise3\3.6.shaders_exercise3.csproj", "{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.5.shaders_exercise2", "src\1.getting_started\3.5.shaders_exercise2\3.5.shaders_exercise2.csproj", "{46B21AED-34C9-4E3B-973E-78A28D4E76C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +72,22 @@ Global
 		{7A213581-5573-4179-A4AD-1DF7FA0D5771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A213581-5573-4179-A4AD-1DF7FA0D5771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A213581-5573-4179-A4AD-1DF7FA0D5771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +101,9 @@ Global
 		{3CD1BA53-BC95-4130-829F-41324A881442} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{8BA07AE5-4454-4FBC-95DF-921711664CC6} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{7A213581-5573-4179-A4AD-1DF7FA0D5771} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{50DC1115-F0BD-44A9-BED1-36A6CAC9B692} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{46B21AED-34C9-4E3B-973E-78A28D4E76C1} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 	EndGlobalSection
 EndGlobal

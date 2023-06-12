@@ -1,4 +1,4 @@
-﻿using Silk.NET.GLFW;
+﻿using shaders_shaderclass;
 using Silk.NET.Input;
 using Silk.NET.Maths;
 using Silk.NET.OpenGL;
@@ -13,35 +13,8 @@ var options = WindowOptions.Default with
 IWindow window = Window.Create(options);
 GL? gl = null;
 
-var vertexShaderSource = """
-    #version 330 core
-    layout(location = 0) in vec3 aPos;
-    layout(location = 1) in vec3 aColor;
-
-    out vec3 ourColor;
-
-    void main()
-    {
-        gl_Position = vec4(aPos, 1.0);
-        ourColor = aColor;
-    }
-    """
-    ;
-
-var fragmentShaderSource = """
-    #version 330 core
-    out vec4 FragColor;
-
-    in vec3 ourColor;
-
-    void main()
-    {
-        FragColor = vec4(ourColor, 1.0);
-    } 
-    """;
-
 uint? vao = null;
-uint? shaderProgram = null;
+ShaderProgram? shaderProgram = null;
 
 window.Load += OnLoad;
 window.Update += OnUpdate;
@@ -58,40 +31,7 @@ unsafe void OnLoad()
     }
     gl = window.CreateOpenGL();
 
-    uint vertexShader = gl.CreateShader(GLEnum.VertexShader);
-    gl.ShaderSource(vertexShader, vertexShaderSource);
-    gl.CompileShader(vertexShader);
-
-    string infoLog = gl.GetShaderInfoLog(vertexShader);
-    if (!string.IsNullOrWhiteSpace(infoLog))
-    {
-        throw new Exception($"Error compiling vertex shader, failed with error {infoLog}");
-    }
-
-    uint fragmentShader = gl.CreateShader(GLEnum.FragmentShader);
-    gl.ShaderSource(fragmentShader, fragmentShaderSource);
-    gl.CompileShader(fragmentShader);
-
-    infoLog = gl.GetShaderInfoLog(fragmentShader);
-    if (!string.IsNullOrWhiteSpace(infoLog))
-    {
-        throw new Exception($"Error compiling fragment shader, failed with error {infoLog}");
-    }
-
-    shaderProgram = gl.CreateProgram();
-
-    gl.AttachShader(shaderProgram.Value, vertexShader);
-    gl.AttachShader(shaderProgram.Value, fragmentShader);
-    gl.LinkProgram(shaderProgram.Value);
-
-    gl.GetProgram(shaderProgram.Value, ProgramPropertyARB.LinkStatus, out int lStatus);
-    if (lStatus != (int)GLEnum.True)
-        throw new Exception("Program failed to link: " + gl.GetProgramInfoLog(shaderProgram.Value));
-
-    gl.DetachShader(shaderProgram.Value, vertexShader);
-    gl.DetachShader(shaderProgram.Value, fragmentShader);
-    gl.DeleteShader(vertexShader);
-    gl.DeleteShader(fragmentShader);
+    shaderProgram = new ShaderProgram(gl, "shader.vector", "shader.fragment");
 
     float[] vertices = new[]
     {
@@ -142,8 +82,8 @@ unsafe void OnRender(double dt)
     gl.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     gl.Clear(ClearBufferMask.ColorBufferBit);
     
-    gl.UseProgram(shaderProgram.Value);
-
+    shaderProgram.Use();
+    shaderProgram.Set("horizontalOffset", 0.5f);
     gl.BindVertexArray(vao.Value);
     gl.DrawArrays(GLEnum.Triangles, 0, 3);
 }
