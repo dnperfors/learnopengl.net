@@ -3,14 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-hellowindow", "01-hellowindow\01-hellowindow.csproj", "{F3EBB918-6666-447A-9376-D9CCF4D342A2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DAA97BA9-AD00-4D58-9368-46BAC79180F1}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-hellotriangle", "02-hellotriangle\02-hellotriangle.csproj", "{67BF2F50-CF74-48C5-AED5-0C6C89A5C733}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Getting Started", "Getting Started", "{2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.hello_window", "src\1.getting_started\1.1.hello_window\1.1.hello_window.csproj", "{6C548200-AF34-4D16-ACB1-B11614988FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1.hello_triangle", "src\1.getting_started\2.1.hello_triangle\2.1.hello_triangle.csproj", "{0C040160-2A98-4E99-B38D-2B73424620FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,16 +20,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3EBB918-6666-447A-9376-D9CCF4D342A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3EBB918-6666-447A-9376-D9CCF4D342A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3EBB918-6666-447A-9376-D9CCF4D342A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3EBB918-6666-447A-9376-D9CCF4D342A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67BF2F50-CF74-48C5-AED5-0C6C89A5C733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67BF2F50-CF74-48C5-AED5-0C6C89A5C733}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67BF2F50-CF74-48C5-AED5-0C6C89A5C733}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67BF2F50-CF74-48C5-AED5-0C6C89A5C733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C548200-AF34-4D16-ACB1-B11614988FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C548200-AF34-4D16-ACB1-B11614988FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C548200-AF34-4D16-ACB1-B11614988FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C548200-AF34-4D16-ACB1-B11614988FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C040160-2A98-4E99-B38D-2B73424620FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C040160-2A98-4E99-B38D-2B73424620FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C040160-2A98-4E99-B38D-2B73424620FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C040160-2A98-4E99-B38D-2B73424620FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C548200-AF34-4D16-ACB1-B11614988FA2} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{0C040160-2A98-4E99-B38D-2B73424620FE} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 	EndGlobalSection
 EndGlobal
