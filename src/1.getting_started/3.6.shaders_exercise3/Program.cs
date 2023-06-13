@@ -1,8 +1,9 @@
-﻿using LearnOpenGL;
-using Silk.NET.Input;
+﻿using Silk.NET.Input;
 using Silk.NET.Maths;
 using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
+
+using Shader = LearnOpenGL.Common.Shader;
 
 var options = WindowOptions.Default with
 {
@@ -14,7 +15,7 @@ IWindow window = Window.Create(options);
 GL? gl = null;
 
 uint? vao = null;
-ShaderProgram? shaderProgram = null;
+Shader? shader = null;
 
 window.Load += OnLoad;
 window.Update += OnUpdate;
@@ -31,7 +32,7 @@ unsafe void OnLoad()
     }
     gl = window.CreateOpenGL();
 
-    shaderProgram = new ShaderProgram(gl, "shader.vector", "shader.fragment");
+    shader = new Shader(gl, "shader.vector", "shader.fragment");
 
     float[] vertices = new[]
     {
@@ -77,12 +78,12 @@ void OnUpdate(double dt)
 
 unsafe void OnRender(double dt)
 {
-    if (gl is null || shaderProgram is null || vao is null) return;
+    if (gl is null || shader is null || vao is null) return;
 
     gl.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     gl.Clear(ClearBufferMask.ColorBufferBit);
     
-    shaderProgram.Use();
+    shader.Use();
     gl.BindVertexArray(vao.Value);
     gl.DrawArrays(GLEnum.Triangles, 0, 3);
 }

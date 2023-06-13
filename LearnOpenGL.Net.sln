@@ -10,29 +10,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Getting Started", "Getting Started", "{2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.hello_window", "src\1.getting_started\1.1.hello_window\1.1.hello_window.csproj", "{6C548200-AF34-4D16-ACB1-B11614988FA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.hello_window", "src\1.getting_started\1.1.hello_window\1.1.hello_window.csproj", "{6C548200-AF34-4D16-ACB1-B11614988FA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1.hello_triangle", "src\1.getting_started\2.1.hello_triangle\2.1.hello_triangle.csproj", "{0C040160-2A98-4E99-B38D-2B73424620FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.1.hello_triangle", "src\1.getting_started\2.1.hello_triangle\2.1.hello_triangle.csproj", "{0C040160-2A98-4E99-B38D-2B73424620FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.2.hello_triangle_indexed", "src\1.getting_started\2.2.hello_triangle_indexed\2.2.hello_triangle_indexed.csproj", "{0C9A1AA7-C557-4AED-A7C2-18845F9CCE32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.2.hello_triangle_indexed", "src\1.getting_started\2.2.hello_triangle_indexed\2.2.hello_triangle_indexed.csproj", "{0C9A1AA7-C557-4AED-A7C2-18845F9CCE32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.3.hello_triangle_exercise1", "src\1.getting_started\2.3.hello_triangle_exercise1\2.3.hello_triangle_exercise1.csproj", "{E95D1C2E-9173-48E7-8F60-9DCD9C7A4099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.3.hello_triangle_exercise1", "src\1.getting_started\2.3.hello_triangle_exercise1\2.3.hello_triangle_exercise1.csproj", "{E95D1C2E-9173-48E7-8F60-9DCD9C7A4099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.4.hello_triangle_exercise2", "src\1.getting_started\2.4.hello_triangle_exercise2\2.4.hello_triangle_exercise2.csproj", "{AE70C5E4-BFFB-4502-BCE9-12918D90FE27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.4.hello_triangle_exercise2", "src\1.getting_started\2.4.hello_triangle_exercise2\2.4.hello_triangle_exercise2.csproj", "{AE70C5E4-BFFB-4502-BCE9-12918D90FE27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.5.hello_triangle_exercise3", "src\1.getting_started\2.5.hello_triangle_exercise3\2.5.hello_triangle_exercise3.csproj", "{3CD1BA53-BC95-4130-829F-41324A881442}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.5.hello_triangle_exercise3", "src\1.getting_started\2.5.hello_triangle_exercise3\2.5.hello_triangle_exercise3.csproj", "{3CD1BA53-BC95-4130-829F-41324A881442}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.1.shaders_uniform", "src\1.getting_started\3.1.shaders_uniform\3.1.shaders_uniform.csproj", "{8BA07AE5-4454-4FBC-95DF-921711664CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.1.shaders_uniform", "src\1.getting_started\3.1.shaders_uniform\3.1.shaders_uniform.csproj", "{8BA07AE5-4454-4FBC-95DF-921711664CC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.2.shaders_interpolation", "src\1.getting_started\3.2.shaders_interpolation\3.2.shaders_interpolation.csproj", "{7A213581-5573-4179-A4AD-1DF7FA0D5771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.2.shaders_interpolation", "src\1.getting_started\3.2.shaders_interpolation\3.2.shaders_interpolation.csproj", "{7A213581-5573-4179-A4AD-1DF7FA0D5771}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.3.shaders_shaderclass", "src\1.getting_started\3.3.shaders_shaderclass\3.3.shaders_shaderclass.csproj", "{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.3.shaders_shaderclass", "src\1.getting_started\3.3.shaders_shaderclass\3.3.shaders_shaderclass.csproj", "{50DC1115-F0BD-44A9-BED1-36A6CAC9B692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.4.shaders_exercise1", "src\1.getting_started\3.4.shaders_exercise1\3.4.shaders_exercise1.csproj", "{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.4.shaders_exercise1", "src\1.getting_started\3.4.shaders_exercise1\3.4.shaders_exercise1.csproj", "{1A2AD3DD-0E9B-4DF5-9BC2-0F7F92F27FCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.6.shaders_exercise3", "src\1.getting_started\3.6.shaders_exercise3\3.6.shaders_exercise3.csproj", "{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.6.shaders_exercise3", "src\1.getting_started\3.6.shaders_exercise3\3.6.shaders_exercise3.csproj", "{F8A21C87-B92D-4AA7-B759-DD99D2EF98BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.5.shaders_exercise2", "src\1.getting_started\3.5.shaders_exercise2\3.5.shaders_exercise2.csproj", "{46B21AED-34C9-4E3B-973E-78A28D4E76C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.5.shaders_exercise2", "src\1.getting_started\3.5.shaders_exercise2\3.5.shaders_exercise2.csproj", "{46B21AED-34C9-4E3B-973E-78A28D4E76C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnOpenGL.Common", "src\LearnOpenGL.Common\LearnOpenGL.Common.csproj", "{89904F6C-C625-4883-A5BA-951837C0C13B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +90,10 @@ Global
 		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46B21AED-34C9-4E3B-973E-78A28D4E76C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89904F6C-C625-4883-A5BA-951837C0C13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89904F6C-C625-4883-A5BA-951837C0C13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89904F6C-C625-4883-A5BA-951837C0C13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89904F6C-C625-4883-A5BA-951837C0C13B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

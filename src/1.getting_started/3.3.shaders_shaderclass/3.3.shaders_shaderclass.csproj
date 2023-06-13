@@ -14,6 +14,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\LearnOpenGL.Common\LearnOpenGL.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Update="shader.fragment">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>

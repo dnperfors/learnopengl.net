@@ -1,14 +1,14 @@
 ﻿using Silk.NET.OpenGL;
 
-namespace LearnOpenGL;
+namespace LearnOpenGL.Common;
 
-public class ShaderProgram
+public class Shader
 {
     private readonly GL gl;
 
     public uint ProgramId { get; }
 
-    public ShaderProgram(GL gl, string vertexShaderFileName, string fragmentShaderFileName)
+    public Shader(GL gl, string vertexShaderFileName, string fragmentShaderFileName)
     {
         this.gl = gl;
 
