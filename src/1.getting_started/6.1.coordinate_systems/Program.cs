@@ -1,17 +1,20 @@
-﻿using Silk.NET.GLFW;
-using Silk.NET.Input;
+﻿using Silk.NET.Input;
 using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
 using StbImageSharp;
 using System.Numerics;
 using Shader = LearnOpenGL.Common.Shader;
+using static LearnOpenGL.Common.GLMaths;
 
 StbImage.stbi_set_flip_vertically_on_load(1);
 
+int width = 800;
+int height = 600;
+
 var options = WindowOptions.Default with
 {
-    Size = new(800, 600),
+    Size = new(width, height),
     Title = "Learn OpenGL"
 };
 
@@ -40,11 +43,11 @@ unsafe void OnLoad()
     shaderProgram = new Shader(gl, "shader.vector", "shader.fragment");
 
     float[] vertices = new[] {
-        // positions          // colors           // texture coords
-         0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
-         0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-        -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
-        -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
+        // positions          // texture coords
+         0.5f,  0.5f, 0.0f,   1.0f, 1.0f, // top right
+         0.5f, -0.5f, 0.0f,   1.0f, 0.0f, // bottom right
+        -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, // bottom left
+        -0.5f,  0.5f, 0.0f,   0.0f, 1.0f  // top left 
     };
 
     uint[] indices = new uint[]
@@ -70,21 +73,17 @@ unsafe void OnLoad()
         gl.BufferData(BufferTargetARB.ElementArrayBuffer, (nuint)(indices.Length * sizeof(uint)), buf, BufferUsageARB.StaticDraw);
     }
 
-    gl.VertexAttribPointer(0, 3, GLEnum.Float, false, 8 * sizeof(float), (void*)0);
+    gl.VertexAttribPointer(0, 3, GLEnum.Float, false, 5 * sizeof(float), (void*)0);
     gl.EnableVertexAttribArray(0);
 
-    gl.VertexAttribPointer(1, 3, GLEnum.Float, false, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+    gl.VertexAttribPointer(1, 2, GLEnum.Float, false, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     gl.EnableVertexAttribArray(1);
-
-    gl.VertexAttribPointer(2, 2, GLEnum.Float, false, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-    gl.EnableVertexAttribArray(2);
 
     gl.BindBuffer(BufferTargetARB.ArrayBuffer, 0);
     gl.BindVertexArray(0);
 
     // uncomment this call to draw in wireframe polygons.
     //gl.PolygonMode(GLEnum.FrontAndBack, GLEnum.Line);
-
 
     textures[0] = gl.GenTexture();
     textures[1] = gl.GenTexture();
@@ -146,12 +145,14 @@ unsafe void OnRender(double dt)
 
     shaderProgram.Use();
 
-    Matrix4x4 trans = Matrix4x4.Identity;
-    trans *= Matrix4x4.CreateRotationZ((float)Glfw.GetApi().GetTime());
-    trans *= Matrix4x4.CreateTranslation(0.5f, -0.5f, 0.0f);
+    Matrix4x4 model = Matrix4x4.CreateRotationX(Radians(-55.0f));
+    Matrix4x4 view = Matrix4x4.CreateTranslation(0.0f, 0.0f, -3.0f);
+    Matrix4x4 projection = Matrix4x4.CreatePerspectiveFieldOfView(Radians(45.0f), (float)width/(float)height, 0.1f, 100.0f);
 
-    shaderProgram.Set("transform", trans);
-
+    shaderProgram.Set("model", model);
+    shaderProgram.Set("view", view);
+    shaderProgram.Set("projection", projection);
+    
     gl.BindVertexArray(vao.Value);
     gl.DrawElements(GLEnum.Triangles, 6, GLEnum.UnsignedInt, null);
 }

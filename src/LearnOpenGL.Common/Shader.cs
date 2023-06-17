@@ -1,4 +1,5 @@
-﻿using Silk.NET.OpenGL;
+﻿using System.Numerics;
+using Silk.NET.OpenGL;
 
 namespace LearnOpenGL.Common;
 
@@ -72,5 +73,10 @@ public class Shader
     public void Set(string name, float value)
     {
         gl.Uniform1(gl.GetUniformLocation(ProgramId, name), value);
+    }
+
+    public unsafe void Set(string name, Matrix4x4 matrix)
+    {
+        gl.UniformMatrix4(gl.GetUniformLocation(ProgramId, name), 1, false, (float*)&matrix);
     }
 }

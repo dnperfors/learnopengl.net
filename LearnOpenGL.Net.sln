@@ -54,6 +54,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.2.transformations_exercis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.3.transformations_exercise2", "src\1.getting_started\5.3.transformations_exercise2\5.3.transformations_exercise2.csproj", "{9472EE40-FBA2-4DC9-B791-BBD7364EE4E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.1.coordinate_systems", "src\1.getting_started\6.1.coordinate_systems\6.1.coordinate_systems.csproj", "{CFE67831-AA06-4267-9485-F523EB05C3CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.2.coordinate_systems_depth", "src\1.getting_started\6.2.coordinate_systems_depth\6.2.coordinate_systems_depth.csproj", "{0A75846F-532C-4ABB-921D-3361BD5C699E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.3.coordinate_systems_multiple", "src\1.getting_started\6.3.coordinate_systems_multiple\6.3.coordinate_systems_multiple.csproj", "{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.4.coordinate_systems_exercise3", "src\1.getting_started\6.4.coordinate_systems_exercise3\6.4.coordinate_systems_exercise3.csproj", "{40095266-46D9-4880-B76C-E18BC769A90F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -148,6 +156,22 @@ Global
 		{9472EE40-FBA2-4DC9-B791-BBD7364EE4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9472EE40-FBA2-4DC9-B791-BBD7364EE4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9472EE40-FBA2-4DC9-B791-BBD7364EE4E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE67831-AA06-4267-9485-F523EB05C3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE67831-AA06-4267-9485-F523EB05C3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE67831-AA06-4267-9485-F523EB05C3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE67831-AA06-4267-9485-F523EB05C3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A75846F-532C-4ABB-921D-3361BD5C699E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A75846F-532C-4ABB-921D-3361BD5C699E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A75846F-532C-4ABB-921D-3361BD5C699E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A75846F-532C-4ABB-921D-3361BD5C699E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40095266-46D9-4880-B76C-E18BC769A90F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40095266-46D9-4880-B76C-E18BC769A90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40095266-46D9-4880-B76C-E18BC769A90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40095266-46D9-4880-B76C-E18BC769A90F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,5 +198,9 @@ Global
 		{CD38CA2B-004F-4A6D-8263-928E543553AF} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{54DE8747-1C02-42B8-AAF6-E559BE23709A} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{9472EE40-FBA2-4DC9-B791-BBD7364EE4E0} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{CFE67831-AA06-4267-9485-F523EB05C3CD} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{0A75846F-532C-4ABB-921D-3361BD5C699E} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{40095266-46D9-4880-B76C-E18BC769A90F} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 	EndGlobalSection
 EndGlobal
