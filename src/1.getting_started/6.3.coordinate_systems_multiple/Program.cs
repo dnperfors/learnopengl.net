@@ -185,7 +185,7 @@ unsafe void OnRender(double dt)
     gl.ActiveTexture(GLEnum.Texture1);
     gl.BindTexture(GLEnum.Texture2D, textures[1]);
 
-    Matrix4x4 view = Matrix4x4.CreateTranslation(0.0f, 0.0f, -30.0f);
+    Matrix4x4 view = Matrix4x4.CreateTranslation(0.0f, 0.0f, -3.0f);
     Matrix4x4 projection = Matrix4x4.CreatePerspectiveFieldOfView(Radians(45.0f), (float)width / (float)height, 0.1f, 100.0f);
     
     shaderProgram.Use();
