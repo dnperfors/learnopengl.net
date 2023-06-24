@@ -41,7 +41,6 @@ Vector3[] cubePositions = new[]
     new Vector3(-1.3f,  1.0f,  -1.5f),
 };
 
-const float cameraSpeed = 0.05f;
 Vector3 cameraPos = new(0.0f, 0.0f, 3.0f);
 Vector3 cameraFront = new(0.0f, 0.0f, -1.0f);
 Vector3 cameraUp = new(0.0f, 1.0f, 0.0f);
@@ -58,11 +57,12 @@ window.Run();
 unsafe void OnLoad()
 {
     var input = window.CreateInput();
-    foreach (var keyboard1 in input.Keyboards)
+    keyboard = input.Keyboards.FirstOrDefault();
+    if (keyboard != null)
     {
-        keyboard = keyboard1;
         keyboard.KeyDown += OnKeyDown;
     }
+
     gl = window.CreateOpenGL();
 
     shaderProgram = new Shader(gl, "shader.vector", "shader.fragment");
@@ -177,6 +177,8 @@ void OnKeyDown(IKeyboard keyboard, Key key, int keyCode)
 
 unsafe void OnUpdate(double dt)
 {
+    float cameraSpeed = 2.5f * (float)dt;
+    
     if (keyboard is null) return;
     if (keyboard.IsKeyPressed(Key.W))
     {
