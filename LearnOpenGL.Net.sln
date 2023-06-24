@@ -62,6 +62,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.3.coordinate_systems_mult
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.4.coordinate_systems_exercise3", "src\1.getting_started\6.4.coordinate_systems_exercise3\6.4.coordinate_systems_exercise3.csproj", "{40095266-46D9-4880-B76C-E18BC769A90F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.1.camera_circle", "src\1.getting_started\7.1.camera_circle\7.1.camera_circle.csproj", "{1144E1EF-A01D-41C1-A16F-E816612D7523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.2.camera_keyboard_dt", "src\1.getting_started\7.2.camera_keyboard_dt\7.2.camera_keyboard_dt.csproj", "{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -172,6 +176,14 @@ Global
 		{40095266-46D9-4880-B76C-E18BC769A90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40095266-46D9-4880-B76C-E18BC769A90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40095266-46D9-4880-B76C-E18BC769A90F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1144E1EF-A01D-41C1-A16F-E816612D7523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1144E1EF-A01D-41C1-A16F-E816612D7523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1144E1EF-A01D-41C1-A16F-E816612D7523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1144E1EF-A01D-41C1-A16F-E816612D7523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -202,5 +214,7 @@ Global
 		{0A75846F-532C-4ABB-921D-3361BD5C699E} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{75BF7C5E-4F8D-4CB1-BEFC-ABE7FEC0EE98} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{40095266-46D9-4880-B76C-E18BC769A90F} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{1144E1EF-A01D-41C1-A16F-E816612D7523} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 	EndGlobalSection
 EndGlobal
