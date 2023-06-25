@@ -66,6 +66,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.1.camera_circle", "src\1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.2.camera_keyboard_dt", "src\1.getting_started\7.2.camera_keyboard_dt\7.2.camera_keyboard_dt.csproj", "{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.3.camera_mouse_zoom", "src\1.getting_started\7.3.camera_mouse_zoom\7.3.camera_mouse_zoom.csproj", "{8DD38724-82A0-430D-AF7C-8AB76CF0CF8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.4.camera_class", "src\1.getting_started\7.4.camera_class\7.4.camera_class.csproj", "{747714A5-B190-4A6C-8D0A-FB226C1538E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -184,6 +188,14 @@ Global
 		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD38724-82A0-430D-AF7C-8AB76CF0CF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD38724-82A0-430D-AF7C-8AB76CF0CF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD38724-82A0-430D-AF7C-8AB76CF0CF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD38724-82A0-430D-AF7C-8AB76CF0CF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747714A5-B190-4A6C-8D0A-FB226C1538E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747714A5-B190-4A6C-8D0A-FB226C1538E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747714A5-B190-4A6C-8D0A-FB226C1538E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747714A5-B190-4A6C-8D0A-FB226C1538E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,5 +228,7 @@ Global
 		{40095266-46D9-4880-B76C-E18BC769A90F} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{1144E1EF-A01D-41C1-A16F-E816612D7523} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 		{D2F5F2F7-ED83-40E9-81FC-86425D1C7EBA} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{8DD38724-82A0-430D-AF7C-8AB76CF0CF8E} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
+		{747714A5-B190-4A6C-8D0A-FB226C1538E2} = {2E5CFA48-C610-4AC8-B788-DBAB70CD74CC}
 	EndGlobalSection
 EndGlobal
