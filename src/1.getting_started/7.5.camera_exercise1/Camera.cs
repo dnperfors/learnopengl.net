@@ -39,10 +39,29 @@ internal class Camera
 
     public Matrix4x4 ViewMatrix => Matrix4x4.CreateLookAt(Position, Position + Front, Up);
 
-    public void MoveForward(float dt) => Position += Front * (MovementSpeed * dt);
-    public void MoveBackward(float dt) => Position -= Front * (MovementSpeed * dt);
-    public void MoveLeft(float dt) => Position -= Vector3.Normalize(Vector3.Cross(Position, Up)) * (MovementSpeed * dt);
-    public void MoveRight(float dt) => Position += Vector3.Normalize(Vector3.Cross(Position, Up)) * (MovementSpeed * dt);
+    public void MoveForward(float dt)
+    {
+        var temp = Position + Front * (MovementSpeed * dt);
+        temp.Y = 0.0f;
+        Position = temp;
+    }
+    public void MoveBackward(float dt)
+    {
+        var temp = Position - Front * (MovementSpeed * dt);
+        temp.Y = 0.0f;
+        Position = temp;
+    }
+    public void MoveLeft(float dt){
+        var temp = Position - Right * (MovementSpeed * dt);
+        temp.Y = 0.0f;
+        Position = temp;
+    }
+    public void MoveRight(float dt)
+    {
+        var temp = Position + Right * (MovementSpeed * dt);
+        temp.Y = 0.0f;
+        Position = temp;
+    }
 
     public void ProcessMouseMovement(Vector2 movement, bool constrainPitch = true)
     {

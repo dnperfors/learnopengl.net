@@ -37,7 +37,34 @@ internal class Camera
     public float MovementSpeed { get; set; } = 2.5f;
     public float MouseSensitivity { get; set; } = 0.1f;
 
-    public Matrix4x4 ViewMatrix => Matrix4x4.CreateLookAt(Position, Position + Front, Up);
+    public Matrix4x4 ViewMatrix => LookAt();//Matrix4x4.CreateLookAt(Position, Position + Front, Up);
+
+    private Matrix4x4 LookAt()
+    {
+        var cameraTarget = Position + Front;
+
+        var direction = Vector3.Normalize(Position - cameraTarget);
+        var right = Vector3.Normalize(Vector3.Cross(Vector3.Normalize(Up), direction));
+        var up = Vector3.Cross(direction, right);
+
+        Matrix4x4 rotation = Matrix4x4.Identity;
+        rotation[0,0] = right.X;
+        rotation[0,1] = right.Y;
+        rotation[0,2] = right.Z;
+        rotation[1,0] = up.X;
+        rotation[1,1] = up.Y;
+        rotation[1,2] = up.Z;
+        rotation[2,0] = direction.X;
+        rotation[2,1] = direction.Y;
+        rotation[2,2] = direction.Z;
+
+        Matrix4x4 translation = Matrix4x4.Identity;
+        translation[3,0] = -Position.X;
+        translation[3,1] = -Position.Y;
+        translation[3,2] = -Position.Z;
+
+        return rotation * translation;
+    }
 
     public void MoveForward(float dt) => Position += Front * (MovementSpeed * dt);
     public void MoveBackward(float dt) => Position -= Front * (MovementSpeed * dt);
